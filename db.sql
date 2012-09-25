@@ -25,6 +25,7 @@ create table `posts`(
     post_id int primary key auto_increment,
     id int,
     post varchar(200),
+    post_date datetime NOT NULL,
     foreign key(id) references users(id)
 ); 
 
