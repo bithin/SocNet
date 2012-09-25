@@ -10,6 +10,7 @@
     }
 
     if ($db->isLoggedIn() && isset($_FILES['avatar'])) {
+        echo "Service under-construction";
         $cmd = 'file --mime-type --brief ' . $_FILES['avatar']['tmp_name'];
         $mime = trim(`$cmd`);
         if ($extension = mime_to_extension($CONFIG['image_info'], $mime)) {
