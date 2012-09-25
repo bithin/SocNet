@@ -1,4 +1,6 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors','On');
     include_once 'classes.php';
     
     class Database {
@@ -80,7 +82,7 @@
         
         public function getPosts() {
             $posts = array();
-            $sql = "SELECT post, username from users, posts where users.id = posts.id ORDER BY post_id DESC";
+            $sql = "SELECT post, username from users, posts where users.id = posts.id ORDER BY post_id DESC LIMIT 10";
             $res = mysql_query($sql, $this->con);
             while ($arr = mysql_fetch_array($res)) {
                 $posts[] = new PostsUser($arr['post'], $arr['username']);
@@ -94,7 +96,7 @@
             $sql1 = "select id from users where username='".$u."'";
             $res = mysql_query($sql1);
             $user_id = mysql_fetch_array($res);
-            $sql2 = "insert into posts(post, id, post_date) values('".$p."','".$user_id['id']."', CURDATE() )";
+            $sql2 = "insert into posts(post, id, post_date) values('".$p."','".$user_id['id']."', CURDATE())";
             mysql_query($sql2);   
         }
 
