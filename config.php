@@ -1,7 +1,7 @@
 <?php
     $CONFIG['db']['host'] = 'localhost';
-    $CONFIG['db']['user'] = 'socnet';
-    $CONFIG['db']['pass'] = 'secret';
+    $CONFIG['db']['user'] = 'root';
+    $CONFIG['db']['pass'] = 'm1ndscape$';
     $CONFIG['db']['name'] = 'socnetdb';
     $CONFIG['path']['home'] = dirname(__FILE__);
     $CONFIG['path']['img'] = 'images';
