@@ -48,7 +48,7 @@
             </div>
         </div>
     <div id="footer"></div>
-        &copy;Team InCTF '12
+       <center>&copy;Team sCTF '12</center>
     </div>
     </body>
 </html>
